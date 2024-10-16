@@ -10,6 +10,16 @@ The division have been done that way:
 2. domain
 3. infrastructure
 
+## Domain
+1. Coupon and Basket are object domain and are saved in ./model
+2. BigDecimal is changed to Double in Coupon.discount, Coupon.minBasketValue and Basket.appliedDiscount. Double is more efficient and for this use case it is not needed the preccission of a BigDecimal.
+3. boolean type is switched to Boolean, as it is more recommended for OOP. 
+
+## Infrastructure
+1. Coupon as a database Entity is created as CouponPersistenceAdapter
+
+## Application
+1. NotNull has been changed to NotEmpty in CouponRequestDTO.codes. It invalidates empty List and also a null List.
 
 ## Resources
 ### data.sql

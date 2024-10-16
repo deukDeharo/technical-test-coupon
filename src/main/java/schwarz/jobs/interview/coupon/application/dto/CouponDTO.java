@@ -9,10 +9,10 @@ import lombok.Data;
 @Builder
 public class CouponDTO {
 
-    private BigDecimal discount;
+    private Double discount;
 
     private String code;
 
-    private BigDecimal minBasketValue;
+    private Double minBasketValue;
 
 }

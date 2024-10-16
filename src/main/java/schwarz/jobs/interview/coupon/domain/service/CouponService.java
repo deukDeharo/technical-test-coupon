@@ -9,8 +9,8 @@ import org.springframework.stereotype.Service;
 import lombok.RequiredArgsConstructor;
 import schwarz.jobs.interview.coupon.application.dto.CouponDTO;
 import schwarz.jobs.interview.coupon.application.dto.CouponRequestDTO;
+import schwarz.jobs.interview.coupon.domain.model.Basket;
 import schwarz.jobs.interview.coupon.domain.model.Coupon;
-import schwarz.jobs.interview.coupon.domain.service.model.Basket;
 import schwarz.jobs.interview.coupon.infrastructure.adapters.output.persistence.repository.CouponRepository;
 
 

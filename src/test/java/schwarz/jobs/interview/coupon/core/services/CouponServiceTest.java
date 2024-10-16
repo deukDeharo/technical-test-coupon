@@ -20,9 +20,9 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import schwarz.jobs.interview.coupon.application.dto.CouponDTO;
 import schwarz.jobs.interview.coupon.application.dto.CouponRequestDTO;
+import schwarz.jobs.interview.coupon.domain.model.Basket;
 import schwarz.jobs.interview.coupon.domain.model.Coupon;
 import schwarz.jobs.interview.coupon.domain.service.CouponService;
-import schwarz.jobs.interview.coupon.domain.service.model.Basket;
 import schwarz.jobs.interview.coupon.infrastructure.adapters.output.persistence.repository.CouponRepository;
 
 

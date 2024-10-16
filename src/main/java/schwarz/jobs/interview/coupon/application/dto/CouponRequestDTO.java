@@ -2,7 +2,7 @@ package schwarz.jobs.interview.coupon.application.dto;
 
 import java.util.List;
 
-import javax.validation.constraints.NotNull;
+import javax.validation.constraints.NotEmpty;
 
 import lombok.Builder;
 import lombok.Data;
@@ -11,7 +11,7 @@ import lombok.Data;
 @Builder
 public class CouponRequestDTO {
 
-    @NotNull
+    @NotEmpty
     private List<String> codes;
 
 }
