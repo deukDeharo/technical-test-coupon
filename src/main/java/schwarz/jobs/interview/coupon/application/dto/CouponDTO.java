@@ -1,4 +1,4 @@
-package schwarz.jobs.interview.coupon.web.dto;
+package schwarz.jobs.interview.coupon.application.dto;
 
 import java.math.BigDecimal;
 

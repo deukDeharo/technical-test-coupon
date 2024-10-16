@@ -1,4 +1,4 @@
-package schwarz.jobs.interview.coupon.core.services.model;
+package schwarz.jobs.interview.coupon.domain.service.model;
 
 import java.math.BigDecimal;
 

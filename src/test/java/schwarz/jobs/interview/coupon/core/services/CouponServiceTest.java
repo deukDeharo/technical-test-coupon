@@ -18,11 +18,14 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
-import schwarz.jobs.interview.coupon.core.domain.Coupon;
-import schwarz.jobs.interview.coupon.core.repository.CouponRepository;
-import schwarz.jobs.interview.coupon.core.services.model.Basket;
-import schwarz.jobs.interview.coupon.web.dto.CouponDTO;
-import schwarz.jobs.interview.coupon.web.dto.CouponRequestDTO;
+import schwarz.jobs.interview.coupon.application.dto.CouponDTO;
+import schwarz.jobs.interview.coupon.application.dto.CouponRequestDTO;
+import schwarz.jobs.interview.coupon.domain.model.Coupon;
+import schwarz.jobs.interview.coupon.domain.service.CouponService;
+import schwarz.jobs.interview.coupon.domain.service.model.Basket;
+import schwarz.jobs.interview.coupon.infrastructure.adapters.output.persistence.repository.CouponRepository;
+
+
 
 @ExtendWith(SpringExtension.class)
 public class CouponServiceTest {

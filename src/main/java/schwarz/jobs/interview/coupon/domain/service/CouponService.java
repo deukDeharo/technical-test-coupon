@@ -1,4 +1,4 @@
-package schwarz.jobs.interview.coupon.core.services;
+package schwarz.jobs.interview.coupon.domain.service;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,11 +7,12 @@ import java.util.Optional;
 import org.springframework.stereotype.Service;
 
 import lombok.RequiredArgsConstructor;
-import schwarz.jobs.interview.coupon.core.domain.Coupon;
-import schwarz.jobs.interview.coupon.core.repository.CouponRepository;
-import schwarz.jobs.interview.coupon.core.services.model.Basket;
-import schwarz.jobs.interview.coupon.web.dto.CouponDTO;
-import schwarz.jobs.interview.coupon.web.dto.CouponRequestDTO;
+import schwarz.jobs.interview.coupon.application.dto.CouponDTO;
+import schwarz.jobs.interview.coupon.application.dto.CouponRequestDTO;
+import schwarz.jobs.interview.coupon.domain.model.Coupon;
+import schwarz.jobs.interview.coupon.domain.service.model.Basket;
+import schwarz.jobs.interview.coupon.infrastructure.adapters.output.persistence.repository.CouponRepository;
+
 
 @Service
 @RequiredArgsConstructor
