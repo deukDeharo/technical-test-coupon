@@ -20,6 +20,7 @@ The division have been done that way:
 
 ## Application
 1. NotNull has been changed to NotEmpty in CouponRequestDTO.codes. It invalidates empty List and also a null List.
+2. UseCase Interfaces have been created and implemented on the services.
 
 ## Resources
 ### data.sql

@@ -1,4 +1,4 @@
-package schwarz.jobs.interview.coupon.infrastructure.adapters.output.persistence;
+package schwarz.jobs.interview.coupon.infrastructure.adapters.output.persistence.entity;
 
 import java.math.BigDecimal;
 
