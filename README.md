@@ -28,6 +28,7 @@ The division have been done that way:
 2. Coupon repository has been moved here and renamed as CouponPersistenceRepository.
 3. It has been added a JPQL query in CouponPersistenceRepository that does the logic of getting coupons by a list of codes.
 4. CouponResource has been moved to adpater/input/web/rest and renamed CouponRestAdapter.
+5. Exception handler has been created for the CouponRestAdapter.
 5. CouponRestAdapter (restcontroller) has been modified:
 
 ### CouponRestAdapter (restcontroller)
@@ -35,7 +36,7 @@ The division have been done that way:
 2. Changed getCoupons by code funcitionality from @GetMapping("/coupons") to  @PostMapping("/search") 
 3. It always return a ResponseEntity<DTO_OBJECTS> 
 4. CreateCoupon route has been changed to @PostMapping("/")
-5. 
+5. Apply functionality has been changed
 
 
 ## Resources
@@ -44,4 +45,8 @@ The division have been done that way:
 2. The files have been changed and splitted in schema.sql and data.sql
 3. The types have been adapted.
 4. Name coupons have been changed to coupon, respecting the entityDatabase design model.
+5. Recommended the creation of an index for the queries that uses a search by code.
 
+## Tests
+1. Tests should be changed to a BDD integration test, using this template methodName_ExpectedBehavior
+2. Should have an assertion when a function returns and a verify to check if the right functions are called the right times.
