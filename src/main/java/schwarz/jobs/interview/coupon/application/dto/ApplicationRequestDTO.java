@@ -5,6 +5,7 @@ import javax.validation.constraints.NotNull;
 
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import schwarz.jobs.interview.coupon.domain.model.Basket;
 
 

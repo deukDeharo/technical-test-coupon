@@ -1,0 +1,8 @@
+DROP TABLE IF EXISTS coupon;
+
+CREATE TABLE coupon (
+    id BIGINT  AUTO_INCREMENT PRIMARY KEY,
+    code  VARCHAR(250) NOT NULL,
+    discount DOUBLE NOT NULL,
+    min_basket_value DOUBLE DEFAULT NULL
+);

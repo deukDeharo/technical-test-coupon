@@ -1,4 +1,4 @@
-package schwarz.jobs.interview.coupon.configuration;
+package schwarz.jobs.interview.coupon.infrastructure.configuration;
 
 
 import org.springframework.context.annotation.Bean;

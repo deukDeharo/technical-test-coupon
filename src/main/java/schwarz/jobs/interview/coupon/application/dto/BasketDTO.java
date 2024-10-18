@@ -1,5 +1,7 @@
 package schwarz.jobs.interview.coupon.application.dto;
 
+import java.math.BigDecimal;
+
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
@@ -8,14 +10,14 @@ import lombok.Data;
 
 @Data
 @Builder
-public class CouponDTO {
+public class BasketDTO {
 
     @NotNull
-    private Double discount;
+    private BigDecimal value;
 
-    @NotEmpty
-    private String code;
+    @NotNull
+    private Double appliedDiscount;
 
-    private Double minBasketValue;
+    private Boolean applicationSuccessful;
 
 }
