@@ -37,7 +37,7 @@ public class CouponServiceImpl implements CouponService {
 
     @Override
     public Basket applyDiscount(Basket basket, String code) {
-        isValidBasket(basket);
+        isValidDiscount(basket);
         Coupon coupon = couponOutputPort.getCouponByCode(code);
         basket.applyDiscount(coupon.getDiscount());
         return basket;
@@ -68,7 +68,7 @@ public class CouponServiceImpl implements CouponService {
 
     
 
-    private Boolean isValidBasket(Basket basket) {
+    private Boolean isValidDiscount(Basket basket) {
         if (basket.getValue().doubleValue() <0){
             throw new NegativeDiscountException("Can't apply negative discounts");
         }else if(basket.getValue().doubleValue() == 0) {
