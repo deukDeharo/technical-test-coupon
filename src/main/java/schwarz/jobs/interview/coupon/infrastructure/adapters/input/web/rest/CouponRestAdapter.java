@@ -55,20 +55,14 @@ public class CouponRestAdapter {
     //     // returns the original basket, no the one with the discout applied. Even if we didn't have the issue with the isApplicationSuccessful
     // }
 
-    // @PostMapping("/create")
-    // public ResponseEntity<Void> create(@RequestBody @Valid final CouponDTO couponDTO) {
 
-    //     final Coupon coupon = couponService.createCoupon(couponDTO);
+    @PostMapping("/")
+    public ResponseEntity<Void> createCoupon(@RequestBody @Valid final CouponDTO couponDTO){
+        couponUseCase.createCoupon(couponDTO);
+        return ResponseEntity.ok().build();
+    }
 
-    //     return ResponseEntity.ok().build();
-    // }
-
-    // @GetMapping("/coupons")
-    // public List<Coupon> getCoupons(@RequestBody @Valid final CouponRequestDTO couponRequestDTO) {
-
-    //     return couponService.getCoupons(couponRequestDTO);
-    // }
-    @PostMapping("/codes")
+    @PostMapping("/search")
     public ResponseEntity<Collection<CouponDTO>> getCoupons(@RequestBody @Valid CouponRequestDTO couponRequestDTO) {
         return ResponseEntity.ok(couponUseCase.getCouponsByCodes(couponRequestDTO));
     }
