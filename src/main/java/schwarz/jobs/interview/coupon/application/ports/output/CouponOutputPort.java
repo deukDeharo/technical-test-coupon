@@ -10,4 +10,6 @@ public interface CouponOutputPort {
 
     public Collection<Coupon> getCouponsByCodes(Collection<String> codes);
 
+    public Coupon getCouponByCode(String code);
+
 }

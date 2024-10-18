@@ -17,6 +17,6 @@ public class ApplicationRequestDTO {
     private String code;
 
     @NotNull
-    private Basket basket;
+    private BasketDTO basket;
 
 }

@@ -34,10 +34,11 @@ public class CouponOutputPortImpl implements CouponOutputPort {
             .collect(Collectors.toSet());
     }
 
-    // @Override
-    // public Coupon getCouponByCode(String code) {
-    //     return repository.findByCode(code)
-    //             .orElseThrow(() -> new EntityNotFoundException(String.format("Coupon with code %s does not exist", code)));
-    // }
+    @Override
+    public Coupon getCouponByCode(String code) {
+        CouponPersistenceEntity entity = repository.findByCode(code)
+                .orElseThrow(() -> new EntityNotFoundException(String.format("Coupon with code %s does not exist", code)));
+        return CouponMapper.toDomain(entity);
+    }
 
 }

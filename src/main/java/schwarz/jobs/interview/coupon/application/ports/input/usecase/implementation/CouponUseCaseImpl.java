@@ -10,8 +10,10 @@ import schwarz.jobs.interview.coupon.application.dto.ApplicationRequestDTO;
 import schwarz.jobs.interview.coupon.application.dto.BasketDTO;
 import schwarz.jobs.interview.coupon.application.dto.CouponDTO;
 import schwarz.jobs.interview.coupon.application.dto.CouponRequestDTO;
+import schwarz.jobs.interview.coupon.application.mapper.BasketMapper;
 import schwarz.jobs.interview.coupon.application.mapper.CouponMapper;
 import schwarz.jobs.interview.coupon.application.ports.input.usecase.CouponUseCase;
+import schwarz.jobs.interview.coupon.domain.model.Basket;
 import schwarz.jobs.interview.coupon.domain.model.Coupon;
 import schwarz.jobs.interview.coupon.domain.service.CouponService;
 import java.util.stream.Collectors;
@@ -23,8 +25,8 @@ public class CouponUseCaseImpl implements CouponUseCase {
     private final CouponService couponService;
     @Override
     public BasketDTO applyDiscount(ApplicationRequestDTO dto) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'applyDiscount'");
+        Basket basket = couponService.applyDiscount(BasketMapper.fromDTO(dto.getBasket()), dto.getCode());
+        return BasketMapper.toDTO(basket);
     }
 
     @Override

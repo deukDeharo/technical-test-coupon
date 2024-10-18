@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import schwarz.jobs.interview.coupon.application.dto.ApplicationRequestDTO;
+import schwarz.jobs.interview.coupon.application.dto.BasketDTO;
 import schwarz.jobs.interview.coupon.application.dto.CouponDTO;
 import schwarz.jobs.interview.coupon.application.dto.CouponRequestDTO;
 import schwarz.jobs.interview.coupon.application.ports.input.usecase.CouponUseCase;
@@ -55,6 +57,12 @@ public class CouponRestAdapter {
     //     // returns the original basket, no the one with the discout applied. Even if we didn't have the issue with the isApplicationSuccessful
     // }
 
+    @PostMapping(value = "/apply")
+    public ResponseEntity<BasketDTO> apply(
+        //@ApiParam(value = "Provides the necessary basket and customer information required for the coupon application", required = true)
+        @RequestBody @Valid final ApplicationRequestDTO applicationRequestDTO) {
+            return  ResponseEntity.ok(couponUseCase.applyDiscount(applicationRequestDTO));
+        }
 
     @PostMapping("/")
     public ResponseEntity<Void> createCoupon(@RequestBody @Valid final CouponDTO couponDTO){
